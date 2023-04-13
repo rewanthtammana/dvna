@@ -12,6 +12,7 @@ jobs:
   sca:
     uses: rewanthtammana/centralized-workflows/.github/workflows/nodejs-sca.yml@main
   build:
+    needs: [gitleaks, sca]
     runs-on: ubuntu-latest
     strategy:
       matrix:
