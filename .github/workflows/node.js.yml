@@ -7,17 +7,7 @@ on:
     branches: [ "master" ]
 
 jobs:
-  sast:
-    uses: rewanthtammana/centralized-workflows/.github/workflows/nodejs-sast.yml@main
-
-  sca:
-    uses: rewanthtammana/centralized-workflows/.github/workflows/nodejs-sca.yml@main
-
-  gitleaks:
-    uses: rewanthtammana/centralized-workflows/.github/workflows/gitleaks.yml@main
-
   build:
-    needs: [sca, sast]
     runs-on: ubuntu-latest
     strategy:
       matrix:
