@@ -9,6 +9,8 @@ on:
 jobs:
   gitleaks:
     uses: rewanthtammana/centralized-workflows/.github/workflows/gitleaks.yml@main
+  sca:
+    uses: rewanthtammana/centralized-workflows/.github/workflows/nodejs-sca.yml@main
   build:
     runs-on: ubuntu-latest
     strategy:
