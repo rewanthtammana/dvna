@@ -13,6 +13,9 @@ jobs:
   sca:
     uses: rewanthtammana/centralized-workflows/.github/workflows/nodejs-sca.yml@main
 
+  gitleaks:
+    uses: rewanthtammana/centralized-workflows/.github/workflows/gitleaks.yml@main
+
   build:
     runs-on: ubuntu-latest
     strategy:
