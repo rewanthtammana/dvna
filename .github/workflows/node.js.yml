@@ -17,6 +17,7 @@ jobs:
     uses: rewanthtammana/centralized-workflows/.github/workflows/gitleaks.yml@main
 
   build:
+    needs: [sca, sast]
     runs-on: ubuntu-latest
     strategy:
       matrix:
